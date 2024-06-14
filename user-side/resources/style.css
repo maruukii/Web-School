@@ -1,0 +1,247 @@
+:root{
+    --gradient:linear-gradient(90deg, #f1c40f, #f39c12);
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box; 
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:#f39c12;
+    color:#fff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+html::-webkit-scrollbar{
+    width:1.5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:linear-gradient(#f1c40f, #f39c12);
+}
+.home .bg{
+    position: absolute;
+    bottom:-.2rem; left: 0;
+    height:10rem;
+    width:100%;
+    background:url(images/shape.png);
+    block-size: 100rem 15rem;
+    filter: drop-shadow(0 -.1rem .1rem rgba(0,0,0,.2));
+    animation: animate 10s linear infinite ;
+}
+
+@keyframes animate{
+
+    0%{
+        background-position-x: 0rem;
+    }
+
+    100%{
+        background-position-x: 100rem;
+    }
+
+}
+
+section{
+    min-height: 100vh;
+    padding:1rem 7%;
+    padding-top:6rem;
+}
+.home table{
+    border-spacing: 1px;
+    display: block;
+    border-color: #12110f;
+    margin: 1rem;
+}
+.home table tr td{
+    font-size: small;
+    padding: 0.4rem;
+}
+.home table tr th{
+    font-size: medium;
+    padding: 0.4rem;
+}
+
+.home table tr td a{
+    font-size: small;
+    font-weight: bold;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column ;
+    background:url(images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+}
+.test{
+    animation: inandout 0.5s ease infinite;
+}
+@keyframes inandout {
+    
+    0%,100% {
+        transform: scale(1);
+      }
+      50%{
+        transform: scale(1.1);
+      }
+}
+.home .task i
+{font-size: 3rem;
+margin-right: 1rem;}
+.home i{
+    font-size: 5rem;
+    margin: 1rem;
+}
+.home legend{
+    font-size: 4rem;
+}
+.home a{
+    font-size: 3rem;
+    color:#f53f1b;
+    padding:1rem 0;
+    width:70rem; 
+     
+}
+.home a:hover{
+    text-decoration:underline;
+    color: #129df3;
+}
+.home .form-example{
+    margin: 1rem;
+}
+.home .form-example label{
+    font-size: 2rem;
+}
+.home h1{
+    font-size: 2.4rem;
+    color: #f39c12;
+}
+.home .form-example input{
+    text-transform: none;
+}
+.home h2{
+    position: absolute;
+    top: 15rem;
+    right: 40rem;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    color: rgb(20, 23, 22);
+}
+
+  .home h4{
+    position: absolute;
+    right:26% ;
+    bottom: 20%;
+    
+  }
+  .home h4 a{
+    font-size: 1.8rem;
+  }
+  .home h4:hover{
+    text-decoration:underline;
+    color: #129df3;
+  }
+ .notification-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+  }
+  
+   .notification-bar p {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .close-button {
+    float: right;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .home h5{
+    position: absolute;
+    font-size: 2rem;
+    right: 20%;
+    top: 26%;
+  }
+  
+  #panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #c8e47c;
+    border: solid 1px #c3c3c3;
+    font-size: 1.5rem;
+  }
+
+  #flip {
+    position: fixed;
+    right: 0%;
+    top: 1%;
+    transform: translateY(-50%);
+    padding: 5px;
+    text-align: center;
+    background-color: #94c01b;
+    border: solid 1px #c3c3c3;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  #panel {
+    min-width: 350px;
+    padding: 10px;
+    display: none;
+    position: absolute;
+    top: 2.7%;
+    right: 0;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    animation-name: slide-from-right;
+    animation-duration: 1s;
+  }
+  #panel table {
+   border-spacing: 4rem;
+   
+  }
+  #panel table th{
+    font-size: 2.1rem;
+    margin: 4rem;
+  }
+  #panel table tr{
+   border: #12110f solid;
+  }
+  
+  
+  @keyframes slide-from-right {
+    from {
+      right: -300px;
+    }
+    to {
+      right: 0;
+    }
+  }
